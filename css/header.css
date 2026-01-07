@@ -1,43 +1,195 @@
 header {
-  display: flex;
-  padding: 10px 20px;
-  background-color: #e1c39f;
+    background-color: #ffffff;
+    box-shadow: 2px 20px rgb(0, 0, 0);
+    border-bottom: 2px solid #ffeb99;
 }
 
-.logo {
-  height: 120px;
-  position: relative;
-  display: flex;
+/* Barra superior laranja com slogan */
+header > div:first-child {
+    background: linear-gradient(135deg, #ff9a3c 0%, #ff8c1a 100%);
+    border-bottom: 2px solid #e67e00;
+    padding: 12px 0;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  align-items: right;
-  display: flex;
-  position: relative;
-  justify-content: right;
+header > div:first-child > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Merriweather', serif;
-  color: white;
-  justify-content: right;
-  align-items: right;
-  display: flex;
-  
-}
-nav ul li a:hover {
-  color: #694100;
+header > div:first-child > div::before {
+    content: "OVOS DE QUALIDADE PARA VOCÊ! CONFIRA NOSSAS OFERTAS ESPECIAIS!";
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.search {
-  padding: 0.5rem;
-  border-radius: 15px;
-  border: 1px solid #ccc;
+/* Esconder os ícones da barra laranja */
+header > div:first-child a {
+    display: none;
 }
 
+/* Navegação principal */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav .logo {
+    height: 110px;
+    width: auto;
+    margin: -25px 0;
+}
+
+/* Container do menu e ícones */
+nav > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-flex;
+    align-items: center;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav > ul > li > a:hover {
+    color: #ff8c1a;
+}
+
+nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff8c1a;
+    transition: width 0.3s ease;
+}
+
+nav > ul > li > a:hover::after {
+    width: 100%;
+}
+
+/* Separador visual antes dos ícones */
+nav > ul > li:last-child {
+    margin-left: 15px;
+    padding-left: 20px;
+    border-left: 1px solid #e0e0e0;
+}
+
+/* Área dos ícones */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #aaaaaa;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.header-icons a:hover {
+    background-color: #ff8c1a;
+    border-color: #ff8c1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 140, 26, 0.3);
+}
+
+.header-icons a img {
+    width: 18px;
+    height: 18px;
+    transition: filter 0.3s ease;
+}
+
+.header-icons a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    nav > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav > ul > li:last-child {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-icons {
+        justify-content: center;
+    }
+
+    header > div:first-child > div::before {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    nav > ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    nav > ul > li {
+        width: 100%;
+        justify-content: center;
+    }
+
+    header > div:first-child > div::before {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    nav .logo {
+        height: 60px;
+    }
+}

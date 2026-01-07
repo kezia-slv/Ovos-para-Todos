@@ -1,0 +1,268 @@
+/* Seção de Contatos */
+.contact-section {
+    padding: 60px 8%;
+    background: #ffffff;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+/* Lado Esquerdo - Imagem do Celular */
+.contact-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.phone-circle {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(135deg, rgba(255, 140, 26, 0.1) 0%, rgba(255, 154, 60, 0.15) 100%);
+    border-radius: 50%;
+    animation: rotate-circle 15s linear infinite;
+}
+
+.phone-circle::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px dashed rgba(255, 140, 26, 0.3);
+    border-radius: 50%;
+    animation: rotate-circle-reverse 10s linear infinite;
+}
+
+.phone-img {
+    position: relative;
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
+    animation: swing-phone 3s ease-in-out infinite;
+}
+
+/* Lado Direito - Informações de Contato */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.contact-info h2 .destaque {
+    color: #ff8c1a;
+}
+
+.contact-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Item de Contato */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.contact-item:hover {
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-left-color: #ff8c1a;
+    transform: translateX(5px);
+}
+
+/* Wrapper do Ícone de Contato */
+.contact-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-icon-wrapper.whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+
+.contact-icon-wrapper.phone {
+    background: linear-gradient(135deg, #ff8c1a 0%, #ff9a3c 100%);
+}
+
+.contact-icon-wrapper.email {
+    background: linear-gradient(135deg, #4285F4 0%, #357AE8 100%);
+}
+
+.contact-item:hover .contact-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Imagem do Ícone */
+.contact-icon-img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+/* Detalhes do Contato */
+.contact-details h3 {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.contact-details p {
+    font-size: 19px;
+    color: #ff8c1a;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.contact-link {
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-link:hover {
+    color: #ff8c1a;
+    border-bottom-color: #ff8c1a;
+}
+
+/* Animações */
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-circle-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes swing-phone {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-image {
+        min-height: 350px;
+    }
+
+    .phone-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .phone-img {
+        max-width: 250px;
+    }
+
+    .contact-info h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .contact-subtitle {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 40px 4%;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+
+    .contact-image {
+        min-height: 280px;
+    }
+
+    .phone-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .phone-img {
+        max-width: 220px;
+    }
+
+    .contact-info h2 {
+        font-size: 26px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 18px;
+    }
+
+    .contact-details h3 {
+        font-size: 15px;
+    }
+
+    .contact-details p {
+        font-size: 17px;
+    }
+}

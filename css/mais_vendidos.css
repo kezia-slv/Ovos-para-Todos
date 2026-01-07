@@ -1,0 +1,237 @@
+/* Seção Mais Vendidos */
+.bestsellers-section {
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3bc 100%);
+}
+
+.bestsellers-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bestsellers-header h2 {
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.bestsellers-header h2 .destaque {
+    color: #ff8c1a;
+}
+
+.bestsellers-header p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Grid de Produtos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+/* Card do Produto */
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 140, 26, 0.25);
+}
+
+/* Badge de Destaque */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ff8c1a 0%, #ff9a3c 100%);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(255, 140, 26, 0.4);
+}
+
+/* Imagem do Produto */
+.product-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.product-image img {
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+/* Nome do Produto */
+.product-name {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Descrição */
+.product-description {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Preço */
+.product-price {
+    font-size: 26px;
+    color: #ff8c1a;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.product-price small {
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+}
+
+/* Botão Comprar */
+.btn-buy {
+    background: linear-gradient(135deg, #ff8c1a 0%, #ff9a3c 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 140, 26, 0.3);
+}
+
+.btn-buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 26, 0.5);
+}
+
+/* Botão Ver Mais */
+.btn-ver-mais-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-ver-mais {
+    background: white;
+    color: #ff8c1a;
+    padding: 15px 50px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #ff8c1a;
+    box-shadow: 0 5px 20px rgba(255, 140, 26, 0.2);
+}
+
+.btn-ver-mais:hover {
+    background: linear-gradient(135deg, #ff8c1a 0%, #ff9a3c 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 140, 26, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    .bestsellers-section {
+        padding: 60px 5%;
+    }
+
+    .bestsellers-header h2 {
+        font-size: 32px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .product-image img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bestsellers-section {
+        padding: 50px 4%;
+    }
+
+    .bestsellers-header h2 {
+        font-size: 26px;
+    }
+
+    .bestsellers-header p {
+        font-size: 14px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+
+    .product-image img {
+        max-width: 130px;
+        max-height: 130px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 22px;
+    }
+
+    .btn-ver-mais {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+}

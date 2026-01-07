@@ -8,19 +8,298 @@
 </head>
 <body>
     <header>
+        <div>
+            <div>
+                <a href=""><img src="img/login.svg" alt=""></a>
+                <a href=""><img src="img/carrinho.svg" alt=""></a>
+                <a href=""><img src="img/pesquisa.svg" alt=""></a>
+            </div>
+        </div>
+        
         <nav>
-            <img src="img/logo.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <img src="img/logo.png" alt="logo" class="logo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li>
+            <div class="header-icons">
+                <a href="#" title="Login"><img src="img/login.svg" alt="Login"></a>
+                <a href="#" title="Carrinho"><img src="img/carrinho.svg" alt="Carrinho"></a>
+                <a href="#" title="Pesquisa"><img src="img/pesquisa.svg" alt="Pesquisa"></a>
+            </div>
+        </li>
+    </ul>
+</nav>
     </header>
     
     <section>
+       <!-- Banner Slider - Cole dentro do <section> no seu index.html -->
+<div class="banner-slider">
+    <div class="slider-wrapper" id="sliderWrapper">
         
+        <!-- Slide 1 - Ovos Jumbo -->
+        <div class="slide">
+            <div class="slide-content">
+                <h2>Ovos Jumbo <span class="destaque">Fresquinhos</span></h2>
+                <p>Qualidade premium direto da granja para sua mesa. Frescor garantido todos os dias!</p>
+                <div class="badges">
+                    <span class="badge">Frescor Garantido</span>
+                    <span class="badge">Entrega Rápida</span>
+                </div>
+                <a href="produtos.html" class="btn-comprar">Comprar Agora</a>
+            </div>
+            <div class="slide-image">
+                <div class="ovo-circle"></div>
+                <div class="ovo-image"><img src="img/ovos_jumbo.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- Slide 2 - Ovos Extra -->
+        <div class="slide">
+            <div class="slide-content">
+                <h2>Ovos Extra <span class="destaque">Premium</span></h2>
+                <p>Casca resistente e cor vibrante. Perfeitos para suas receitas especiais!</p>
+                <div class="badges">
+                    <span class="badge">Alta Qualidade</span>
+                    <span class="badge">Casca Forte</span>
+                </div>
+                <a href="produtos.html" class="btn-comprar">Comprar Agora</a>
+            </div>
+            <div class="slide-image">
+                <div class="ovo-circle"></div>
+                <div class="ovo-image"><img src="img/ovos_extra.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- Slide 4 - Ovos Vermelhos -->
+        <div class="slide">
+            <div class="slide-content">
+                <h2>Ovos Jumbo e Extra Vermelhos  <span class="destaque">Tradicionais</span></h2>
+                <p>O sabor da roça na sua casa! Galinhas criadas soltas, ovos mais saborosos.</p>
+                <div class="badges">
+                    <span class="badge">Criação Livre</span>
+                    <span class="badge">Sabor Especial</span>
+                </div>
+                <a href="produtos.html" class="btn-comprar">Comprar Agora</a>
+            </div>
+            <div class="slide-image">
+                <div class="ovo-circle"></div>
+                <div class="ovo-image"><img src="img/ovos_vermelhos.png" alt=""></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Setas de navegação -->
+    <button class="slider-arrow prev" onclick="changeSlide(-1)">❮</button>
+    <button class="slider-arrow next" onclick="changeSlide(1)">❯</button>
+
+    <!-- Controles de navegação (dots) -->
+    <div class="slider-controls" id="sliderControls"></div>
+</div>
+
     </section>
+
+    <section class="benefits-section">
+    <div class="benefits-container">
+        <div class="benefit-card">
+            <img src="img/custo_beneficio.svg" alt="Custo Benefício">
+            <h3>Custo Benefício</h3>
+            <p>As melhores ofertas para você!</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="img/clientes_satisfeitos.svg" alt="Clientes Satisfeitos">
+            <h3>Clientes Satisfeitos</h3>
+            <p>Nossos clientes recomendam!</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="img/whatsapp.svg" alt="WhatsApp">
+            <h3>WhatsApp</h3>
+            <p>Atendimentos via WhatsApp!</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="img/entrega.svg" alt="Entrega Rápida">
+            <h3>Entrega Rápida</h3>
+            <p>Receba em tempo recorde!</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="img/qualidade.svg" alt="Qualidade">
+            <h3>Qualidade Garantida</h3>
+            <p>Ovos frescos e de qualidade!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Mais Vendidos -->
+<section class="bestsellers-section">
+    <div class="bestsellers-header">
+        <h2>Nossos <span class="destaque">Mais Vendidos</span></h2>
+        <p>Os ovos preferidos dos nossos clientes!</p>
+    </div>
+
+    <div class="products-grid">
+        <!-- Produto 1 -->
+        <div class="product-card">
+            <span class="product-badge">Mais Vendido</span>
+            <div class="product-image">
+                <img src="img/ovos_jumbo.png" alt="Ovos Jumbo">
+            </div>
+            <h3 class="product-name">Ovos Jumbo Brancos</h3>
+            <p class="product-description">Ovos grandes e frescos, perfeitos para qualquer receita</p>
+            <div class="product-price">R$ 18,90 </div>
+            <a href="#" class="btn-buy">Comprar Agora</a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product-card">
+            <span class="product-badge">Destaque</span>
+            <div class="product-image">
+                <img src="img/ovos_extra.png" alt="Ovos Extra">
+            </div>
+            <h3 class="product-name">Ovos Extra Brancos</h3>
+            <p class="product-description">Tamanho médio ideal para o dia a dia</p>
+            <div class="product-price">R$ 16,50 </div>
+            <a href="#" class="btn-buy">Comprar Agora</a>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/ovos_vermelhos.png" alt="Ovos Vermelhos">
+            </div>
+            <h3 class="product-name">Ovos Jumbo Vermelhos</h3>
+            <p class="product-description">Ovos vermelhos grandes com sabor tradicional</p>
+            <div class="product-price">R$ 19,90 </div>
+            <a href="#" class="btn-buy">Comprar Agora</a>
+        </div>
+    </div>
+    <!-- Botão Ver Mais -->
+    <div class="btn-ver-mais-container">
+        <a href="produtos.html" class="btn-ver-mais">Ver Mais Produtos</a>
+    </div>
+</section>
+
+<!-- Seção de Contatos -->
+
+<section class="contact-section">
+    <div class="contact-container">
+        <!-- Lado Esquerdo - Imagem do Celular -->
+        <div class="contact-image">
+            <div class="phone-circle"></div>
+            <img src="img/celular.png" alt="Entre em contato" class="phone-img">
+        </div>
+
+        <!-- Lado Direito - Informações de Contato -->
+        <div class="contact-info">
+            <h2>Entre em <span class="destaque">Contato</span></h2>
+            <p class="contact-subtitle">Estamos prontos para atender você!</p>
+
+            <!-- WhatsApp -->
+            <div class="contact-item">
+                <div class="contact-icon-wrapper whatsapp">
+                    <img src="img/whatsapp.svg" alt="WhatsApp" class="contact-icon-img">
+                </div>
+                <div class="contact-details">
+                    <h3>WhatsApp</h3>
+                    <p>(11) 98765-4321</p>
+                    <a href="https://wa.me/5511987654321" target="_blank" class="contact-link">Enviar mensagem</a>
+                </div>
+            </div>
+
+            <!-- Telefone -->
+            <div class="contact-item">
+                <div class="contact-icon-wrapper phone">
+                    <img src="img/telefone.svg" alt="Telefone" class="contact-icon-img">
+                </div>
+                <div class="contact-details">
+                    <h3>Telefone</h3>
+                    <p>(11) 3456-7890</p>
+                    <a href="tel:1134567890" class="contact-link">Ligar agora</a>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-item">
+                <div class="contact-icon-wrapper email">
+                    <img src="img/email.svg" alt="E-mail" class="contact-icon-img">
+                </div>
+                <div class="contact-details">
+                    <h3>E-mail</h3>
+                    <p>contato@ovosparatodos.com.br</p>
+                    <a href="mailto:contato@ovosparatodos.com.br" class="contact-link">Enviar e-mail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Coluna 1 - Logo e Descrição -->
+        <div class="footer-column">
+            <img src="img/logo.png" alt="Ovos para Todos" class="footer-logo">
+            <p class="footer-description">
+                Qualidade e frescor direto da granja para sua mesa. Ovos selecionados com carinho para você e sua família.
+            </p>
+          
+        </div>
+
+        <!-- Coluna 2 - Links Rápidos -->
+        <div class="footer-column">
+            <h3 class="footer-title">Links Rápidos</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3 - Produtos -->
+        <div class="footer-column">
+            <h3 class="footer-title">Nossos Produtos</h3>
+            <ul class="footer-links">
+                <li><a href="#">Ovos Jumbo Brancos</a></li>
+                <li><a href="#">Ovos Extra Brancos</a></li>
+                <li><a href="#">Ovos Vermelhos</a></li>
+                <li><a href="#">Ovos Caipira</a></li>
+                <li><a href="#">Ovos Orgânicos</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 4 - Contato -->
+        <div class="footer-column">
+            <h3 class="footer-title">Contato</h3>
+            <ul class="footer-contact">
+                <li>
+                    <img src="img/whatsapp.svg" alt="WhatsApp">
+                    <span>(11) 98765-4321</span>
+                </li>
+                <li>
+                    <img src="img/telefone.svg" alt="Telefone">
+                    <span>(11) 3456-7890</span>
+                </li>
+                <li>
+                    <img src="img/email.svg" alt="E-mail">
+                    <span>contato@ovosparatodos.com.br</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra inferior de copyright -->
+    <div class="footer-bottom">
+        <p>© 2025 Ovos para Todos. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="js/banner.js"></script>
 </body>
 </html>
