@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Ovos para Todos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <a href=""><img src="img/login.svg" alt=""></a>
+                <a href=""><img src="img/carrinho.svg" alt=""></a>
+                <a href=""><img src="img/pesquisa.svg" alt=""></a>
+            </div>
+        </div>
+        
+        <nav>
+    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li>
+            <div class="header-icons">
+                <a href="#" title="Login"><img src="img/login.svg" alt="Login"></a>
+                <a href="#" title="Carrinho"><img src="img/carrinho.svg" alt="Carrinho"></a>
+                <a href="#" title="Pesquisa"><img src="img/pesquisa.svg" alt="Pesquisa"></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+    </header>
+
+    <section class="produtos-section">
+        <div class="produtos-container">
+            <div class="produtos-header">
+                <h1>Nossos <span class="destaque">Produtos</span></h1>
+                <p>Ovos frescos e de qualidade para você!</p>
+            </div>
+
+            <div class="produtos-wrapper">
+                <!-- Sidebar de Filtros -->
+                <aside class="filtros-sidebar">
+                    <div class="filtro-grupo">
+                        <h3 class="filtro-titulo">Filtrar por Tipo</h3>
+                        <div class="filtro-opcoes">
+                            <label class="filtro-item">
+                                <input type="checkbox" class="filtro-checkbox" data-filter="tipo" value="todos" checked>
+                                <span>Todos</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="checkbox" class="filtro-checkbox" data-filter="tipo" value="extra">
+                                <span>Ovos Extra</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="checkbox" class="filtro-checkbox" data-filter="tipo" value="jumbo">
+                                <span>Ovos Jumbo</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="checkbox" class="filtro-checkbox" data-filter="tipo" value="vermelho">
+                                <span>Ovos Vermelhos</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="checkbox" class="filtro-checkbox" data-filter="tipo" value="caipira">
+                                <span>Ovos Caipira</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="checkbox" class="filtro-checkbox" data-filter="tipo" value="codorna">
+                                <span>Ovos de Codorna</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <h3 class="filtro-titulo">Filtrar por Preço</h3>
+                        <div class="filtro-opcoes">
+                            <label class="filtro-item">
+                                <input type="radio" name="preco" class="filtro-radio" data-filter="preco" value="todos" checked>
+                                <span>Todos os preços</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="radio" name="preco" class="filtro-radio" data-filter="preco" value="baixo">
+                                <span>Abaixo de R$ 15,00</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="radio" name="preco" class="filtro-radio" data-filter="preco" value="medio">
+                                <span>R$ 15,00 - R$ 20,00</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="radio" name="preco" class="filtro-radio" data-filter="preco" value="alto">
+                                <span>Acima de R$ 20,00</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <h3 class="filtro-titulo">Disponibilidade</h3>
+                        <div class="filtro-opcoes">
+                            <label class="filtro-item">
+                                <input type="radio" name="disponibilidade" class="filtro-radio" data-filter="disponibilidade" value="todos" checked>
+                                <span>Todos</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="radio" name="disponibilidade" class="filtro-radio" data-filter="disponibilidade" value="estoque">
+                                <span>Em estoque</span>
+                            </label>
+                            <label class="filtro-item">
+                                <input type="radio" name="disponibilidade" class="filtro-radio" data-filter="disponibilidade" value="esgotado">
+                                <span>Esgotado</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn-limpar-filtros">Limpar Filtros</button>
+                </aside>
+
+                <!-- Grid de Produtos -->
+                <div class="produtos-grid">
+                    <!-- Produto 1 - Ovos Extra -->
+                    <div class="produto-card" data-tipo="extra" data-preco="16.50" data-disponibilidade="estoque">
+                        <span class="produto-badge disponivel">Em Estoque</span>
+                        <div class="produto-image">
+                            <img src="img/ovos_extra.png" alt="Ovos Extra">
+                        </div>
+                        <h3 class="produto-name">Ovos Extra Brancos</h3>
+                        <p class="produto-description">Tamanho médio ideal para o dia a dia, frescos e nutritivos</p>
+                        <div class="produto-price">R$ 16,50</div>
+                        <a href="#" class="btn-buy">Comprar Agora</a>
+                    </div>
+
+                    <!-- Produto 2 - Ovos Jumbo -->
+                    <div class="produto-card" data-tipo="jumbo" data-preco="18.90" data-disponibilidade="estoque">
+                        <span class="produto-badge disponivel">Em Estoque</span>
+                        <div class="produto-image">
+                            <img src="img/ovos_jumbo.png" alt="Ovos Jumbo">
+                        </div>
+                        <h3 class="produto-name">Ovos Jumbo Brancos</h3>
+                        <p class="produto-description">Ovos grandes e frescos, perfeitos para qualquer receita</p>
+                        <div class="produto-price">R$ 18,90</div>
+                        <a href="#" class="btn-buy">Comprar Agora</a>
+                    </div>
+
+                    <!-- Produto 3 - Ovos Vermelhos -->
+                    <div class="produto-card" data-tipo="vermelho" data-preco="19.90" data-disponibilidade="estoque">
+                        <span class="produto-badge disponivel">Em Estoque</span>
+                        <div class="produto-image">
+                            <img src="img/ovos_vermelhos.png" alt="Ovos Vermelhos">
+                        </div>
+                        <h3 class="produto-name">Ovos Jumbo Vermelhos</h3>
+                        <p class="produto-description">Ovos vermelhos grandes com sabor tradicional e autêntico</p>
+                        <div class="produto-price">R$ 19,90</div>
+                        <a href="#" class="btn-buy">Comprar Agora</a>
+                    </div>
+
+                    <!-- Produto 4 - Ovos Caipira -->
+                    <div class="produto-card" data-tipo="caipira" data-preco="22.50" data-disponibilidade="estoque">
+                        <span class="produto-badge disponivel">Em Estoque</span>
+                        <div class="produto-image">
+                            <img src="img/ovos_caipira.png" alt="Ovos Caipira">
+                        </div>
+                        <h3 class="produto-name">Ovos Caipira</h3>
+                        <p class="produto-description">De galinhas criadas soltas, com gema mais escura e sabor intenso</p>
+                        <div class="produto-price">R$ 22,50</div>
+                        <a href="#" class="btn-buy">Comprar Agora</a>
+                    </div>
+
+                    <!-- Produto 5 - Ovos de Codorna -->
+                    <div class="produto-card" data-tipo="codorna" data-preco="12.90" data-disponibilidade="estoque">
+                        <span class="produto-badge disponivel">Em Estoque</span>
+                        <div class="produto-image">
+                            <img src="img/ovos_codorna.png" alt="Ovos de Codorna">
+                        </div>
+                        <h3 class="produto-name">Ovos de Codorna</h3>
+                        <p class="produto-description">Pequenos e saborosos, ideais para petiscos e receitas especiais</p>
+                        <div class="produto-price">R$ 12,90</div>
+                        <a href="#" class="btn-buy">Comprar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Coluna 1 - Logo e Descrição -->
+        <div class="footer-column">
+            <img src="img/logo.png" alt="Ovos para Todos" class="footer-logo">
+            <p class="footer-description">
+                Qualidade e frescor direto da granja para sua mesa. Ovos selecionados com carinho para você e sua família.
+            </p>
+          
+        </div>
+
+        <!-- Coluna 2 - Links Rápidos -->
+        <div class="footer-column">
+            <h3 class="footer-title">Links Rápidos</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3 - Produtos -->
+        <div class="footer-column">
+            <h3 class="footer-title">Nossos Produtos</h3>
+            <ul class="footer-links">
+                <li><a href="#">Ovos Jumbo Brancos</a></li>
+                <li><a href="#">Ovos Extra Brancos</a></li>
+                <li><a href="#">Ovos Vermelhos</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 4 - Contato -->
+        <div class="footer-column">
+            <h3 class="footer-title">Contato</h3>
+            <ul class="footer-contact">
+                <li>
+                    <img src="img/whatsapp.svg" alt="WhatsApp">
+                    <span>(11) 98765-4321</span>
+                </li>
+                <li>
+                    <img src="img/telefone.svg" alt="Telefone">
+                    <span>(11) 3456-7890</span>
+                </li>
+                <li>
+                    <img src="img/email.svg" alt="E-mail">
+                    <span>contato@ovosparatodos.com.br</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra inferior de copyright -->
+    <div class="footer-bottom">
+        <p>© 2025 Ovos para Todos. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="js/produtos.js"></script>
+</body>
+</html>
