@@ -1,0 +1,601 @@
+/* ========================================
+   ESTILOS DA PÁGINA CURIOSIDADES E RECEITAS
+   ======================================== */
+
+/* Seção Principal */
+.curiosidades-section {
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3bc 100%);
+    min-height: 80vh;
+}
+
+.curiosidades-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+   ======================================== */
+
+.curiosidades-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.curiosidades-header h1 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.curiosidades-header h1 .destaque {
+    color: #ff8c1a;
+}
+
+.curiosidades-header h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff8c1a;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.curiosidades-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ========================================
+   INTRODUÇÃO DA PÁGINA
+   ======================================== */
+
+.curiosidades-intro {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 50px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.intro-icon {
+    font-size: 60px;
+    flex-shrink: 0;
+    animation: bounce 2s infinite;
+}
+
+.intro-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.intro-content strong {
+    color: #ff8c1a;
+    font-weight: 600;
+}
+
+/* ========================================
+   DIVISOR DE SEÇÃO
+   ======================================== */
+
+.section-divider {
+    text-align: center;
+    margin: 70px 0 50px 0;
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #ff8c1a 50%, transparent 100%);
+}
+
+.section-divider::before {
+    left: 0;
+}
+
+.section-divider::after {
+    right: 0;
+}
+
+.divider-icon {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 15px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.section-divider h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-divider p {
+    font-size: 15px;
+    color: #666;
+}
+
+.receitas-divider {
+    margin-top: 100px;
+}
+
+/* ========================================
+   GRID DE VÍDEOS
+   ======================================== */
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* ========================================
+   CARD DE VÍDEO
+   ======================================== */
+
+.video-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 140, 26, 0.25);
+}
+
+/* Animação escalonada */
+.video-card:nth-child(1) { animation-delay: 0.1s; }
+.video-card:nth-child(2) { animation-delay: 0.2s; }
+.video-card:nth-child(3) { animation-delay: 0.3s; }
+.video-card:nth-child(4) { animation-delay: 0.4s; }
+.video-card:nth-child(5) { animation-delay: 0.5s; }
+.video-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ========================================
+   THUMBNAIL DO VÍDEO
+   ======================================== */
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #fff3bc 0%, #ffe5a8 100%);
+    overflow: hidden;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+
+.video-placeholder p {
+    font-size: 14px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Botão Play */
+.play-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff8c1a 0%, #ff9a3c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 140, 26, 0.4);
+}
+
+.play-button span {
+    color: white;
+    font-size: 28px;
+    margin-left: 4px;
+}
+
+.video-card:hover .play-button {
+    transform: scale(1.15);
+    box-shadow: 0 12px 35px rgba(255, 140, 26, 0.6);
+}
+
+/* Badge de Receita */
+.receita-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.receita-badge {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.video-card:nth-child(4) .receita-badge,
+.video-card:nth-child(5) .receita-badge,
+.video-card:nth-child(7) .receita-badge,
+.video-card:nth-child(9) .receita-badge {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+}
+
+.video-card:nth-child(1) .receita-badge,
+.video-card:nth-child(3) .receita-badge,
+.video-card:nth-child(6) .receita-badge,
+.video-card:nth-child(8) .receita-badge {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+/* ========================================
+   INFORMAÇÕES DO VÍDEO
+   ======================================== */
+
+.video-info {
+    padding: 25px;
+}
+
+.video-info h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.video-duration {
+    font-size: 13px;
+    color: #ff8c1a;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   TAGS DE RECEITAS
+   ======================================== */
+
+.receita-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    background: #f9f9f9;
+    color: #666;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: #fff9e6;
+    border-color: #ff8c1a;
+    color: #ff8c1a;
+}
+
+/* ========================================
+   CALL TO ACTION
+   ======================================== */
+
+.curiosidades-cta {
+    margin-top: 80px;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #ff8c1a 0%, #ff9a3c 100%);
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(255, 140, 26, 0.3);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.cta-content h2 {
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-newsletter,
+.btn-produtos-secondary {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.btn-newsletter {
+    background: white;
+    color: #ff8c1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-newsletter:hover {
+    background: #fff9e6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-produtos-secondary {
+    background: transparent;
+    color: white;
+}
+
+.btn-produtos-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 968px) {
+    .curiosidades-section {
+        padding: 50px 5%;
+    }
+
+    .curiosidades-header h1 {
+        font-size: 36px;
+    }
+
+    .curiosidades-intro {
+        padding: 35px 30px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-icon {
+        font-size: 50px;
+    }
+
+    .intro-content p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .section-divider h2 {
+        font-size: 30px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+        width: 20%;
+    }
+
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .video-thumbnail {
+        height: 180px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+
+    .cta-content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .video-info {
+        padding: 20px;
+    }
+
+    .video-info h3 {
+        font-size: 18px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .curiosidades-section {
+        padding: 40px 4%;
+    }
+
+    .curiosidades-header h1 {
+        font-size: 28px;
+    }
+
+    .curiosidades-subtitle {
+        font-size: 14px;
+    }
+
+    .curiosidades-intro {
+        padding: 30px 20px;
+        margin-bottom: 50px;
+    }
+
+    .intro-icon {
+        font-size: 40px;
+    }
+
+    .intro-content p {
+        font-size: 15px;
+    }
+
+    .section-divider {
+        margin: 50px 0 40px 0;
+    }
+
+    .divider-icon {
+        font-size: 40px;
+    }
+
+    .section-divider h2 {
+        font-size: 24px;
+    }
+
+    .section-divider p {
+        font-size: 13px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .video-thumbnail {
+        height: 200px;
+    }
+
+    .video-info h3 {
+        font-size: 17px;
+    }
+
+    .video-description {
+        font-size: 13px;
+    }
+
+    .curiosidades-cta {
+        padding: 35px 25px;
+        margin-top: 60px;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .cta-content p {
+        font-size: 14px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-newsletter,
+    .btn-produtos-secondary {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
