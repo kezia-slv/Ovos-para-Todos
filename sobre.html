@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - Ovos para Todos</title>
+    <title>Ovos para Todos</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -34,73 +34,147 @@
 </nav>
     </header>
 
-    <section>
-        <div class="sobre-container">
+    <!-- Seção Principal Sobre -->
+<section class="sobre-section">
+    <div class="sobre-container">
+        <!-- Cabeçalho -->
+        <div class="sobre-header">
             <h1>Sobre <span class="destaque">Nós</span></h1>
-            <p>Na Ovos para Todos, nossa missão é fornecer ovos frescos e de alta qualidade para todas as famílias. Com anos de experiência no setor avícola, garantimos que nossos produtos sejam cuidadosamente selecionados e embalados para manter seu frescor e sabor.</p>
-            <p>Nossa equipe é dedicada a oferecer o melhor atendimento ao cliente, assegurando que cada compra seja uma experiência agradável. Valorizamos a confiança que nossos clientes depositam em nós e trabalhamos continuamente para superar suas expectativas.</p>
-            <p>Agradecemos por escolher a Ovos para Todos como sua fonte confiável de ovos frescos. Estamos comprometidos em servir você com excelência e qualidade em cada etapa do caminho.</p>
+            <p class="sobre-subtitle">Paixão, qualidade e cuidado em cada ovo</p>
         </div>
-    </section>
 
+        <!-- Conteúdo Principal -->
+        <div class="sobre-content">
+            <div class="sobre-text">
+                <p>
+                    Na <strong>Ovos para Todos</strong>, somos uma empresa jovem, mas já nascemos com o compromisso 
+                    de entregar ovos frescos e de altíssima qualidade para as famílias brasileiras. Acreditamos 
+                    que um ovo fresco faz toda a diferença na alimentação e saúde da sua família.
+                </p>
+                <p>
+                    Cada ovo é tratado com atenção especial desde o manejo na granja até a entrega na sua mesa. 
+                    Nosso processo de produção segue os mais rigorosos padrões de qualidade e higiene, 
+                    garantindo que você receba sempre o melhor.
+                </p>
+                <p>
+                    Nossa equipe é dedicada a oferecer um atendimento diferenciado, assegurando que cada 
+                    compra seja uma experiência agradável. Nosso foco é simples: qualidade real e cuidado 
+                    genuíno em cada etapa. Começamos recentemente, mas já fazemos diferente pelo carinho 
+                    que temos com cada produto.
+                </p>
+            </div>
+            <div class="sobre-image">
+                <img src="img/granja.jpg" alt="Nossa Granja" 
+                     onerror="this.src='https://via.placeholder.com/500x400/ff6b6b/ffffff?text=Ovos+para+Todos'">
+            </div>
+        </div>
+
+        
+
+        <!-- Nossos Valores -->
+        <div class="valores-section">
+            <h2 class="valores-title">Nossos Valores</h2>
+            <div class="valores-grid">
+                <div class="valor-card">
+                    <div class="valor-icon">🥚</div>
+                    <h3>Qualidade</h3>
+                    <p>
+                        Selecionamos apenas os melhores ovos, garantindo frescor e 
+                        excelência em cada produto que chega até você.
+                    </p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon">💚</div>
+                    <h3>Sustentabilidade</h3>
+                    <p>
+                        Comprometidos com práticas sustentáveis e bem-estar animal em 
+                        todas as etapas da produção.
+                    </p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon">🤝</div>
+                    <h3>Confiança</h3>
+                    <p>
+                        Transparência total em nossos processos, construindo relações 
+                        duradouras com nossos clientes.
+                    </p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon">⚡</div>
+                    <h3>Agilidade</h3>
+                    <p>
+                        Entrega rápida e eficiente, garantindo que você receba seus 
+                        ovos sempre frescos e no prazo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="sobre-cta">
+            <h2>Pronto para experimentar a diferença?</h2>
+            <p>Conheça nossa linha completa de produtos e faça seu pedido hoje mesmo!</p>
+            <a href="produtos.html" class="cta-button">Ver Produtos</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
     <footer class="footer">
-    <div class="footer-container">
-        <!-- Coluna 1 - Logo e Descrição -->
-        <div class="footer-column">
-            <img src="img/logo.png" alt="Ovos para Todos" class="footer-logo">
-            <p class="footer-description">
-                Qualidade e frescor direto da granja para sua mesa. Ovos selecionados com carinho para você e sua família.
-            </p>
-          
+        <div class="footer-container">
+            <!-- Coluna 1 - Logo e Descrição -->
+            <div class="footer-column">
+                <img src="img/logo.png" alt="Ovos para Todos" class="footer-logo">
+                <p class="footer-description">
+                    Qualidade e frescor direto da granja para sua mesa. Ovos selecionados com carinho para você e sua família.
+                </p>
+            </div>
+
+            <!-- Coluna 2 - Links Rápidos -->
+            <div class="footer-column">
+                <h3 class="footer-title">Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3 - Produtos -->
+            <div class="footer-column">
+                <h3 class="footer-title">Nossos Produtos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Ovos Jumbo Brancos</a></li>
+                    <li><a href="#">Ovos Extra Brancos</a></li>
+                    <li><a href="#">Ovos Vermelhos</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-column">
+                <h3 class="footer-title">Contato</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <img src="img/whatsapp.svg" alt="WhatsApp">
+                        <span>(11) 98765-4321</span>
+                    </li>
+                    <li>
+                        <img src="img/telefone.svg" alt="Telefone">
+                        <span>(11) 3456-7890</span>
+                    </li>
+                    <li>
+                        <img src="img/email.svg" alt="E-mail">
+                        <span>contato@ovosparatodos.com.br</span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Coluna 2 - Links Rápidos -->
-        <div class="footer-column">
-            <h3 class="footer-title">Links Rápidos</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+        <!-- Barra inferior de copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 Ovos para Todos. Todos os direitos reservados.</p>
         </div>
-
-        <!-- Coluna 3 - Produtos -->
-        <div class="footer-column">
-            <h3 class="footer-title">Nossos Produtos</h3>
-            <ul class="footer-links">
-                <li><a href="#">Ovos Jumbo Brancos</a></li>
-                <li><a href="#">Ovos Extra Brancos</a></li>
-                <li><a href="#">Ovos Vermelhos</a></li>
-            </ul>
-        </div>
-
-        <!-- Coluna 4 - Contato -->
-        <div class="footer-column">
-            <h3 class="footer-title">Contato</h3>
-            <ul class="footer-contact">
-                <li>
-                    <img src="img/whatsapp.svg" alt="WhatsApp">
-                    <span>(11) 98765-4321</span>
-                </li>
-                <li>
-                    <img src="img/telefone.svg" alt="Telefone">
-                    <span>(11) 3456-7890</span>
-                </li>
-                <li>
-                    <img src="img/email.svg" alt="E-mail">
-                    <span>contato@ovosparatodos.com.br</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Barra inferior de copyright -->
-    <div class="footer-bottom">
-        <p>© 2025 Ovos para Todos. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-    
+    </footer>
 </body>
 </html>
