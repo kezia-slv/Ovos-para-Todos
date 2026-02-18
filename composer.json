@@ -1,0 +1,17 @@
+{
+    "name": "kezia/ovos-para-todos",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ovos\\Ebenezer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kezia.slv",
+            "email": "keziaoficialk@gmail.com"
+        }
+    ],
+    "require": {}
+}
