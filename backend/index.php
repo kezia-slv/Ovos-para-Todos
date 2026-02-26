@@ -1,0 +1,95 @@
+<?php
+namespace Ovos\Ebenezer;
+ini_set('display_errors', 0);
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+ini_set('error_log', __DIR__ . '/php_error.log');
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/Core/helpers.php';
+require_once __DIR__ . '/Core/Env.php';
+
+// Carrega variáveis de ambiente (.env)
+\Ovos\Ebenezer\Core\Env::carregar(__DIR__);
+use Ovos\Ebenezer\Rotas\Rotas;
+
+use Bramus\Router\Router;
+use Ovos\Ebenezer\Controllers\Api\APIItemController;
+
+
+
+
+// Rotas da API
+// GET /backend/api/item - Lista todos os itens com paginação
+// if ($rota === '/backend/api/item' && $metodo === 'GET') {
+//     $apiController->listarItens();
+//     exit;
+// }
+
+// // GET /backend/api/item/{id} - Busca um item específico
+// if (preg_match('#^/backend/api/item/(\d+)$#', $rota, $matches) && $metodo === 'GET') {
+//     $apiController->buscarItem($matches[1]);
+//     exit;
+// }
+
+// // GET /backend/api/item/pesquisar - Pesquisa itens
+// if ($rota === '/backend/api/item/pesquisar' && $metodo === 'GET') {
+//     $apiController->pesquisarItens();
+//     exit;
+// }
+
+// // GET /backend/api/item/tipos - Lista tipos disponíveis
+// if ($rota === '/backend/api/item/tipos' && $metodo === 'GET') {
+//     $apiController->listarTipos();
+//     exit;
+// }
+
+$router = new Router();
+// Define o base path dinamicamente
+$basePath = dirname($_SERVER['SCRIPT_NAME']);
+// Ajuste para quando o servidor não suporta rewrite (php -S) e acessamos via index.php
+if (strpos($_SERVER['REQUEST_URI'], $basePath . '/index.php') === 0) {
+    $basePath .= '/index.php';
+}
+$router->setBasePath($basePath);
+
+
+$rotas = Rotas::get();
+$router->setNamespace('Ovos\Ebenezer\Controllers');
+
+foreach ($rotas as $metodoHttp => $rota) {
+    foreach ($rota as $uri => $acao) {
+        $metodoBramus = strtolower($metodoHttp);
+        $router->{ $metodoBramus}($uri, $acao); // a dor de cabeça começa aqui
+    }
+}
+$router->set404(function () {
+    header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+    echo '404, Rota não encontrada!';
+});
+
+try {
+    $router->run();
+}
+catch (\Throwable $e) {
+    http_response_code(500);
+    echo "<div style='background: #fee; border: 2px solid red; padding: 20px; font-family: monospace;'>";
+    echo "<h1>❌ Erro Fatal no Sistema</h1>";
+    echo "<p><strong>Mensagem:</strong> " . $e->getMessage() . "</p>";
+    echo "<p><strong>Arquivo:</strong> " . $e->getFile() . " (Linha " . $e->getLine() . ")</p>";
+    echo "<h3>Stack Trace:</h3>";
+    echo "<pre>" . $e->getTraceAsString() . "</pre>";
+    echo "</div>";
+}
+
+/**
+ * Rotas da API
+ * Adicione estas rotas ao seu arquivo de rotas principal
+ */
+
+// Exemplo de como registrar as rotas (adapte ao seu sistema de rotas)
+
+use Ovos\Ebenezer\Controllers\Api\ItemApiController;
+
+// Instancia o controller

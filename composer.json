@@ -4,8 +4,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ovos\\Ebenezer\\": "src/"
-        }
+            "Ovos\\Ebenezer\\": ""
+        },
+        "files": [
+            "Core/helpers.php"
+        ]
     },
     "authors": [
         {
@@ -13,5 +16,7 @@
             "email": "keziaoficialk@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "bramus/router": "^1.6"
+    }
 }
