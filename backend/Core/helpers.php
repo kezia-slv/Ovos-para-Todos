@@ -43,11 +43,16 @@ if (!function_exists('view')) {
 
 if (!function_exists('url')) {
     /**
-     * Retorna URL absoluta baseada em APP_URL.
+     * Retorna URL absoluta baseada em APP_URL ou HTTP_HOST.
      */
     function url($path = '')
     {
-        $baseUrl = getenv('APP_URL') ?: 'http://localhost/ovos-ebenezer';
+        $baseUrl = getenv('APP_URL');
+        if (!$baseUrl) {
+            $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+            $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+            $baseUrl = $scheme . '://' . $host;
+        }
         $baseUrl = rtrim($baseUrl, '/');
         return $baseUrl . '/' . ltrim($path, '/');
     }
@@ -59,7 +64,12 @@ if (!function_exists('base_url')) {
      */
     function base_url($path = '')
     {
-        $appUrl = getenv('APP_URL') ?: 'http://localhost/ovos-ebenezer';
+        $appUrl = getenv('APP_URL');
+        if (!$appUrl) {
+            $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+            $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+            $appUrl = $scheme . '://' . $host;
+        }
         $parsedUrl = parse_url($appUrl);
         $basePath = $parsedUrl['path'] ?? '';
         return rtrim($basePath, '/') . '/' . ltrim($path, '/');
@@ -87,27 +97,34 @@ if (!function_exists('calcularTempoDecorrido')) {
      */
     function calcularTempoDecorrido($data)
     {
-        if (!$data) return 'Data não informada';
+        if (!$data)
+            return 'Data não informada';
 
         $timestamp = is_numeric($data) ? $data : strtotime($data);
-        if (!$timestamp) return $data;
+        if (!$timestamp)
+            return $data;
 
-        $agora     = time();
+        $agora = time();
         $diferenca = $agora - $timestamp;
 
-        if ($diferenca < 60)    return "agora mesmo";
+        if ($diferenca < 60)
+            return "agora mesmo";
 
         $minutos = round($diferenca / 60);
-        if ($minutos < 60)      return "há $minutos " . ($minutos == 1 ? "minuto" : "minutos");
+        if ($minutos < 60)
+            return "há $minutos " . ($minutos == 1 ? "minuto" : "minutos");
 
         $horas = round($diferenca / 3600);
-        if ($horas < 24)        return "há $horas " . ($horas == 1 ? "hora" : "horas");
+        if ($horas < 24)
+            return "há $horas " . ($horas == 1 ? "hora" : "horas");
 
         $dias = round($diferenca / 86400);
-        if ($dias < 30)         return "há $dias " . ($dias == 1 ? "dia" : "dias");
+        if ($dias < 30)
+            return "há $dias " . ($dias == 1 ? "dia" : "dias");
 
         $meses = round($diferenca / 2592000);
-        if ($meses < 12)        return "há $meses " . ($meses == 1 ? "mês" : "meses");
+        if ($meses < 12)
+            return "há $meses " . ($meses == 1 ? "mês" : "meses");
 
         return date('d/m/Y', $timestamp);
     }

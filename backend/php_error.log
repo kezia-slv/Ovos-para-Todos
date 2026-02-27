@@ -173,3 +173,26 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\index.php on line 58
+[27-Feb-2026 03:03:39 Europe/Berlin] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\DashboardController.php on line 3
+[27-Feb-2026 03:27:32 Europe/Berlin] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\DashboardController.php on line 3
+[27-Feb-2026 03:51:04 Europe/Berlin] === INSERINDO USUÁRIO ===
+[27-Feb-2026 03:51:04 Europe/Berlin] Nome: Kezia Silva, Email: keziaoficialk@gmail.com, Tipo: Cliente
+[27-Feb-2026 03:51:04 Europe/Berlin] ✅ Usuário criado com ID: 1
+[27-Feb-2026 03:51:04 Europe/Berlin] PHP Warning:  Undefined property: Ovos\Ebenezer\Controllers\AuthController::$notificacaoEmail in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\AuthController.php on line 110
+[27-Feb-2026 03:51:04 Europe/Berlin] AVISO: Falha ao enviar email de boas-vindas para keziaoficialk@gmail.com: Call to a member function boasVindas() on null
+[27-Feb-2026 04:14:39 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:15:47 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:15:47 Europe/Berlin] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\DashboardController.php on line 3
+[27-Feb-2026 04:17:16 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:17:46 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:17:46 Europe/Berlin] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\DashboardController.php on line 3
+[27-Feb-2026 04:22:25 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:25:12 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:41:42 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 04:49:38 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 05:25:03 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 13:09:05 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 13:21:48 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 13:27:55 Europe/Berlin] ERRO: Tipo 'Administrador' inválido. Deve ser: Cliente, Funcionario, Motorista, Admin
+[27-Feb-2026 13:27:55 Europe/Berlin] ERRO AO INSERIR USUÁRIO: inseriUsuario retornou false para test2@example.com
+[27-Feb-2026 13:29:34 Europe/Berlin] Usuário não encontrado ou duplicado: admin@admin.com

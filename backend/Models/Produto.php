@@ -7,7 +7,7 @@ use Exception;
 
 /**
  * Model para gerenciar a tabela tbl_produtos
- * Schema: id_produto, nome_produto, descricao_produto, preco_produto,
+ * Schema: id_produtos, nome_produto, descricao_produto, preco_produto,
  *         foto_produto, categoria_produto, tipo_produto, unidade_produto,
  *         estoque_produto, criado_em, atualizado_em, excluido_em
  */
@@ -53,7 +53,7 @@ class Produto
     // ATUALIZAÇÃO (UPDATE)
     // =========================================================
 
-    public function atualizarProduto(int $id_produto, array $dados): bool
+    public function atualizarProduto(int $id_produtos, array $dados): bool
     {
         $dados['atualizado_em'] = date('Y-m-d H:i:s');
 
@@ -63,17 +63,17 @@ class Produto
         }
         $setString = implode(', ', $setParts);
 
-        $sql = "UPDATE tbl_produtos SET {$setString} WHERE id_produto = :id_produto";
+        $sql = "UPDATE tbl_produtos SET {$setString} WHERE id_produtos = :id_produtos";
 
         try {
             $stmt = $this->db->prepare($sql);
-            $stmt->bindParam(':id_produto', $id_produto, PDO::PARAM_INT);
+            $stmt->bindParam(':id_produtos', $id_produtos, PDO::PARAM_INT);
             foreach ($dados as $coluna => &$valor) {
                 $stmt->bindValue(":{$coluna}", $valor);
             }
             return $stmt->execute();
         } catch (Exception $e) {
-            error_log("ERRO ao atualizar produto #{$id_produto}: " . $e->getMessage());
+            error_log("ERRO ao atualizar produto #{$id_produtos}: " . $e->getMessage());
             return false;
         }
     }
@@ -82,32 +82,32 @@ class Produto
     // EXCLUSÃO SOFT DELETE
     // =========================================================
 
-    public function excluirProduto(int $id_produto): bool
+    public function excluirProduto(int $id_produtos): bool
     {
         $dataAtual = date('Y-m-d H:i:s');
-        $sql = "UPDATE tbl_produtos SET excluido_em = :atual WHERE id_produto = :id";
+        $sql = "UPDATE tbl_produtos SET excluido_em = :atual WHERE id_produtos = :id";
         $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':id',    $id_produto, PDO::PARAM_INT);
+        $stmt->bindParam(':id',    $id_produtos, PDO::PARAM_INT);
         $stmt->bindParam(':atual', $dataAtual);
 
         try {
             return $stmt->execute();
         } catch (Exception $e) {
-            error_log("ERRO ao excluir produto #{$id_produto}: " . $e->getMessage());
+            error_log("ERRO ao excluir produto #{$id_produtos}: " . $e->getMessage());
             return false;
         }
     }
 
-    public function ativarProduto(int $id_produto): bool
+    public function ativarProduto(int $id_produtos): bool
     {
-        $sql = "UPDATE tbl_produtos SET excluido_em = NULL WHERE id_produto = :id";
+        $sql = "UPDATE tbl_produtos SET excluido_em = NULL WHERE id_produtos = :id";
         $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':id', $id_produto, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id_produtos, PDO::PARAM_INT);
 
         try {
             return $stmt->execute();
         } catch (Exception $e) {
-            error_log("ERRO ao ativar produto #{$id_produto}: " . $e->getMessage());
+            error_log("ERRO ao ativar produto #{$id_produtos}: " . $e->getMessage());
             return false;
         }
     }
@@ -120,7 +120,7 @@ class Produto
     {
         $sql = "SELECT * FROM tbl_produtos
                 WHERE excluido_em IS NULL
-                ORDER BY id_produto DESC";
+                ORDER BY id_produtos DESC";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -131,11 +131,11 @@ class Produto
         return $dados;
     }
 
-    public function buscarProdutoPorID(int $id_produto): array|false
+    public function buscarProdutoPorID(int $id_produtos): array|false
     {
-        $sql = "SELECT * FROM tbl_produtos WHERE id_produto = :id";
+        $sql = "SELECT * FROM tbl_produtos WHERE id_produtos = :id";
         $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':id', $id_produto, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id_produtos, PDO::PARAM_INT);
         $stmt->execute();
         $produto = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -164,7 +164,7 @@ class Produto
     public function pesquisarProdutosSimples(string $termo): array
     {
         $like = "%{$termo}%";
-        $sql = "SELECT id_produto, nome_produto, preco_produto, estoque_produto
+        $sql = "SELECT id_produtos, nome_produto, preco_produto, estoque_produto
                 FROM tbl_produtos
                 WHERE nome_produto LIKE :termo AND excluido_em IS NULL
                 LIMIT 10";
@@ -197,7 +197,7 @@ class Produto
         $offset = ($pagina - 1) * $por_pagina;
         $sql = "SELECT * FROM tbl_produtos
                 WHERE {$where}
-                ORDER BY id_produto DESC
+                ORDER BY id_produtos DESC
                 LIMIT :limit OFFSET :offset";
 
         $stmt = $this->db->prepare($sql);

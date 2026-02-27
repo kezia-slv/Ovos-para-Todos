@@ -22,7 +22,8 @@ class View
         // Verifica tipo de usuário para carregar o header correto
         if (isset($_SESSION['usuario_tipo']) && $_SESSION['usuario_tipo'] === 'Cliente') {
             require_once __DIR__ . "/../Views/templates/admin/cliente/partials/header.php";
-        } else {
+        }
+        else {
             require_once __DIR__ . "/../Views/templates/partials/header.php";
         }
 
