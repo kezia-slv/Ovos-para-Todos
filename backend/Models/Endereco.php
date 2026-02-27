@@ -3,7 +3,7 @@
 namespace Ovos\Ebenezer\Models;
 
 use PDO;
-
+use PDOException;
 class Endereco {
     private $db;
     private $id_endereco;

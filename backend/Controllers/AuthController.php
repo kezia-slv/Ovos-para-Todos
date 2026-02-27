@@ -67,7 +67,7 @@ class AuthController
             //\Ovos\Ebenezer\Core\Cart::sync($usuario['id_usuario']);
 
             if ($usuario['tipo_usuario'] === 'Cliente') {
-                Redirect::redirecionarPara('/backend/dashboard');
+                Redirect::redirecionarPara('/');
             }
             else {
                 Redirect::redirecionarPara('/backend/dashboard');
@@ -103,7 +103,7 @@ class AuthController
                 return Redirect::redirecionarComMensagem('/backend/register', 'erros', 'Erro ao cadastrar, problema no seu e-mail.');
             }
 
-            $novoUsuarioId = $this->usuarioModel->inseriUsuario($nome, $email, $senha, 'Administrador');
+            $novoUsuarioId = $this->usuarioModel->inseriUsuario($nome, $email, $senha, 'Cliente');
 
             if ($novoUsuarioId) {
                 try {

@@ -1,5 +1,3 @@
-<?php defined('APP') or die('Acesso negado'); ?>
-
 <div class="container mt-4">
 
     <!-- Cabeçalho -->

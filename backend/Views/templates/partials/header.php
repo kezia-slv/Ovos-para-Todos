@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ovos Ebenezer â€” Painel</title>
+    <title>Ovos Ebenezer - Painel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -871,7 +871,7 @@
     <div class="panel"></div>
     <div class="panel"></div>
     <div class="overlay-logo">
-        <span class="overlay-egg">ðŸ¥š</span>
+        <span class="overlay-egg">🥚</span>
         <span class="overlay-text">Ovos Ebenezer</span>
     </div>
 </div>
@@ -936,6 +936,24 @@
         <a href="/backend/avaliacao/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/avaliacao') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-star"></i></span>
             Avaliações
+        </a>
+
+        <a href="/backend/fornecedor/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/fornecedor') !== false) ? 'active' : '' ?>">
+            <span class="nav-icon"><i class="fas fa-truck"></i></span>
+            Fornecedores
+        </a>
+
+        <a href="/backend/entregas/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/entregas') !== false) ? 'active' : '' ?>">
+            <span class="nav-icon"><i class="fas fa-truck"></i></span>
+            Entregas
+        </a>
+        <a href="/backend/tipo-ovo/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/tipo-ovo') !== false) ? 'active' : '' ?>">
+            <span class="nav-icon"><i class="fas fa-egg"></i></span>
+            Tipos de Ovo
+        </a>
+        <a href="/backend/vendas/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/vendas') !== false) ? 'active' : '' ?>">
+            <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+            Vendas
         </a>
 
         <div class="nav-section-label">Sistema</div>

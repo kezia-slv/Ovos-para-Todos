@@ -1,5 +1,3 @@
-<?php defined('APP') or die('Acesso negado'); ?>
-
 <div class="container mt-4">
 
     <!-- Cabeçalho -->
@@ -66,7 +64,7 @@
                             <?php foreach ($tipos as $item): ?>
                                 <tr>
                                     <td><?= htmlspecialchars($item['id_tipo_ovo']) ?></td>
-                                    <td><?= htmlspecialchars($item['nome_tipo_ovo']) ?></td>
+                                    <td><?= htmlspecialchars($item['tipo_ovo']) ?></td>
                                     <td><?= htmlspecialchars($item['criado_em']) ?></td>
                                     <td>
                                         <?php if (is_null($item['excluido_em'])): ?>

@@ -57,7 +57,7 @@ class EntregasController {
         $entregue_em     = !empty($_POST['entregue_em']) ? $_POST['entregue_em'] : null;
 
         // ⚠️ Corrigir o nome do método na model de inserirEndereco para inserirEntrega
-        $resultado = $this->entregas->inserirEntrega(
+        $resultado = $this->entregas->inserirEntregas(
             $id_usuario,
             $id_pedidos,
             $status_entrega,
@@ -92,7 +92,7 @@ class EntregasController {
         $id_entrega = (int)$_POST['id_entrega'];
 
         // ⚠️ Corrigir o método excluirEndereco para excluirEntrega na model
-        if ($this->entregas->excluirEntrega($id_entrega)) {
+        if ($this->entregas->excluirEntregas($id_entrega)) {
             Redirect::redirecionarComMensagem("/entregas/listar", "success", "Entrega excluída com sucesso!");
         } else {
             Redirect::redirecionarComMensagem("/entregas/listar", "error", "Erro ao excluir entrega.");
@@ -103,7 +103,7 @@ class EntregasController {
         $id_entrega = (int)$_POST['id_entrega'];
 
         // ⚠️ Corrigir o método ativarEndereco para ativarEntrega na model
-        if ($this->entregas->ativarEntrega($id_entrega)) {
+        if ($this->entregas->ativarEntregas($id_entrega)) {
             Redirect::redirecionarComMensagem("/entregas/listar", "success", "Entrega ativada com sucesso!");
         } else {
             Redirect::redirecionarComMensagem("/entregas/listar", "error", "Erro ao ativar entrega.");

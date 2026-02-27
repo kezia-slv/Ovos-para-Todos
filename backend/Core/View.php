@@ -19,17 +19,46 @@ class View
 
         extract($dados);
 
+        $isAuthPage = strpos($nomeView, 'auth/') !== false;
+
         // Verifica tipo de usuário para carregar o header correto
-        if (isset($_SESSION['usuario_tipo']) && $_SESSION['usuario_tipo'] === 'Cliente') {
-            require_once __DIR__ . "/../Views/templates/admin/cliente/partials/header.php";
+        if (!$isAuthPage) {
+            if (isset($_SESSION['usuario_tipo']) && $_SESSION['usuario_tipo'] === 'Cliente') {
+                require_once __DIR__ . "/../Views/templates/admin/cliente/partials/header.php";
+            }
+            else {
+                require_once __DIR__ . "/../Views/templates/partials/header.php";
+            }
         }
         else {
-            require_once __DIR__ . "/../Views/templates/partials/header.php";
+            // Para as páginas de auth, carrega apenas o CSS base e FontAwesome
+            echo '<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovos Ebenezer - Autenticação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f6f5f7;
+            font-family: \'Sora\', sans-serif;
+        }
+    </style>
+</head>
+<body>';
         }
 
         require_once $caminhoView;
 
-        require_once __DIR__ . "/../Views/templates/partials/footer.php";
+        if (!$isAuthPage) {
+            require_once __DIR__ . "/../Views/templates/partials/footer.php";
+        }
+        else {
+            echo '</body></html>';
+        }
     }
 
 }

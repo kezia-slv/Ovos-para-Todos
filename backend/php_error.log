@@ -198,3 +198,169 @@ Stack trace:
 [27-Feb-2026 13:29:34 Europe/Berlin] Usuário não encontrado ou duplicado: admin@admin.com
 [27-Feb-2026 13:46:54 Europe/Berlin] Usuário não encontrado ou duplicado: test@test.com
 [27-Feb-2026 13:58:38 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 15:26:16 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 15:32:45 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 18:12:04 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 18:15:59 Europe/Berlin] ERRO: Tipo 'Administrador' inválido. Deve ser: Cliente, Funcionario, Motorista, Admin
+[27-Feb-2026 18:15:59 Europe/Berlin] ERRO AO INSERIR USUÁRIO: inseriUsuario retornou false para carla.santos@gmail.com
+[27-Feb-2026 18:16:08 Europe/Berlin] Usuário não encontrado ou duplicado: carla.santos@gmail.com
+[27-Feb-2026 18:52:33 Europe/Berlin] ERRO: Tipo 'Administrador' inválido. Deve ser: Cliente, Funcionario, Motorista, Admin
+[27-Feb-2026 18:52:33 Europe/Berlin] ERRO AO INSERIR USUÁRIO: inseriUsuario retornou false para carla.santos@gmail.com
+[27-Feb-2026 18:52:55 Europe/Berlin] Usuário não encontrado ou duplicado: carla.santos@gmail.com
+[27-Feb-2026 18:53:02 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 19:55:01 Europe/Berlin] === INSERINDO USUÁRIO ===
+[27-Feb-2026 19:55:01 Europe/Berlin] Nome: Carla santos, Email: carla.santos@gmail.com, Tipo: Admin
+[27-Feb-2026 19:55:01 Europe/Berlin] ✅ Usuário criado com ID: 2
+[27-Feb-2026 19:55:01 Europe/Berlin] PHP Warning:  Undefined property: Ovos\Ebenezer\Controllers\AuthController::$notificacaoEmail in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\AuthController.php on line 110
+[27-Feb-2026 19:55:01 Europe/Berlin] AVISO: Falha ao enviar email de boas-vindas para carla.santos@gmail.com: Call to a member function boasVindas() on null
+[27-Feb-2026 19:55:13 Europe/Berlin] Login bem-sucedido: carla.santos@gmail.com
+[27-Feb-2026 20:23:14 Europe/Berlin] === INSERINDO USUÁRIO ===
+[27-Feb-2026 20:23:14 Europe/Berlin] Nome: julia, Email: juliasilva@gmail.com, Tipo: Cliente
+[27-Feb-2026 20:23:14 Europe/Berlin] ✅ Usuário criado com ID: 3
+[27-Feb-2026 20:23:14 Europe/Berlin] PHP Warning:  Undefined property: Ovos\Ebenezer\Controllers\AuthController::$notificacaoEmail in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Controllers\AuthController.php on line 110
+[27-Feb-2026 20:23:14 Europe/Berlin] AVISO: Falha ao enviar email de boas-vindas para juliasilva@gmail.com: Call to a member function boasVindas() on null
+[27-Feb-2026 20:23:39 Europe/Berlin] Login bem-sucedido: juliasilva@gmail.com
+[27-Feb-2026 20:24:07 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 20:24:24 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 20:24:42 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 21:06:38 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:12 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 22:55:13 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 71
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 96
+[27-Feb-2026 23:01:16 Europe/Berlin] PHP Warning:  Undefined array key "id_entrega" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\entregas\index.php on line 100
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67
+[27-Feb-2026 23:03:33 Europe/Berlin] PHP Warning:  Undefined array key "nome_tipo_ovo" in C:\Users\Kezia\Desktop\Ovos-para-Todos\backend\Views\templates\tipo-ovo\index.php on line 67

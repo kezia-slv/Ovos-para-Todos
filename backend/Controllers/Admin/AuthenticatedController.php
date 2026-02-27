@@ -17,7 +17,14 @@ abstract class AuthenticatedController
                 'Você precisa estar logado para acessar esta página.'
             );
         }
+
+        // Bloqueia acesso ao painel admin se o usuário for apenas Cliente
+        if ($this->session->get('usuario_tipo') === 'Cliente') {
+            Redirect::redirecionarComMensagem(
+                '/', // Redireciona para a home pública
+                'error',
+                'Acesso restrito: Sua conta não tem permissões de administrador.'
+            );
+        }
     }
 }
-
-
