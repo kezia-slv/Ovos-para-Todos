@@ -1,6 +1,8 @@
 <?php
 
-namespace Ovos\Ebenezer\Rotas;
+namespace Ovos\Ebenezer\Models;
+
+use PDO;
 
 class Endereco {
     private $db;

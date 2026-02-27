@@ -431,6 +431,12 @@
         <a href="/pedido/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/pedido') !== false) ? 'active' : '' ?>">
             <i class="fas fa-receipt"></i> Pedidos
         </a>
+        <a href="/endereco/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/endereco') !== false) ? 'active' : '' ?>">
+            <i class="fas fa-map-marker-alt"></i> Endereços
+        </a>
+        <a href="/estoque/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/estoque') !== false) ? 'active' : '' ?>">
+            <i class="fas fa-boxes"></i> Estoque
+        </a>
 
         <div class="nav-section-label">Sistema</div>
         <a href="/configuracoes" class="nav-item">

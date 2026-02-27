@@ -21,7 +21,7 @@ class Config
                 'driver' => 'mysql',
                 'mysql' => array(
                  'host' => '127.0.0.1',
-                'db_name' => 'ovos_ebenezer',
+                'db_name' => 'db_ovos_ebenezer',
                 'username' => 'root',
                 'password' => '',
                 'charset' => 'utf8',

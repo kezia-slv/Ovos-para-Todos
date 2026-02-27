@@ -7,7 +7,6 @@ if (session_status() === PHP_SESSION_NONE) {
 ini_set('error_log', __DIR__ . '/php_error.log');
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/Core/helpers.php';
 require_once __DIR__ . '/Core/Env.php';
 
 // Carrega variáveis de ambiente (.env)

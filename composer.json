@@ -4,10 +4,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ovos\\Ebenezer\\": ""
+            "Ovos\\Ebenezer\\": "backend/"
         },
         "files": [
-            "Core/helpers.php"
+            "backend/Core/helpers.php"
         ]
     },
     "authors": [

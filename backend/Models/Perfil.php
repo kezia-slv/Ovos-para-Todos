@@ -2,6 +2,8 @@
 
 namespace Ovos\Ebenezer\Models;
 
+use PDO;
+
 class Perfil{
     private $db;
     private $id_perfil_usuario;
