@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ovos Ebenezer — Painel</title>
+    <title>Ovos Ebenezer â€” Painel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/admin-styles.css">
 
     <style>
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        DESIGN TOKENS
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     :root {
         /* Marca */
         --brand:          #F97316;
@@ -26,7 +26,7 @@
         --sidebar-bg2:    #2C1A0E;
         --sidebar-w:      245px;
 
-        /* Superfícies */
+        /* SuperfÃ­cies */
         --bg:             #F5F0EB;
         --card:           #FFFFFF;
         --card-border:    #EDE5DC;
@@ -36,7 +36,7 @@
         --text-secondary: #7C6A5A;
         --text-muted:     #B5A090;
 
-        /* Utilitários */
+        /* UtilitÃ¡rios */
         --green:          #16A34A;
         --green-bg:       #DCFCE7;
         --red:            #DC2626;
@@ -60,9 +60,9 @@
         --shadow-brand:   0 6px 20px rgba(249,115,22,.25);
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        RESET
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
         font-family: 'Sora', sans-serif;
@@ -75,9 +75,9 @@
     a { text-decoration: none; color: inherit; }
     img { display: block; max-width: 100%; }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        SIDEBAR
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .sidebar {
         width: var(--sidebar-w);
         min-height: 100vh;
@@ -109,7 +109,7 @@
         pointer-events: none;
     }
 
-    /* ── Perfil (topo da sidebar) ── */
+    /* â”€â”€ Perfil (topo da sidebar) â”€â”€ */
     .sidebar-profile {
         padding: 24px 20px 18px;
         display: flex;
@@ -195,20 +195,20 @@
         letter-spacing: .04em;
     }
 
-    /* ── Navegação ── */
+    /* â”€â”€ NavegaÃ§Ã£o â”€â”€ */
     .sidebar-nav {
         flex: 1;
         padding: 12px 10px;
         overflow-y: auto;
         scrollbar-width: none;
-        position: relative; /* necessário para o indicador deslizante */
+        position: relative; /* necessÃ¡rio para o indicador deslizante */
     }
     .sidebar-nav::-webkit-scrollbar { display: none; }
 
-    /* ════════════════════════════════════════
-       SLIDING INDICATOR (animação principal)
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       SLIDING INDICATOR (animaÃ§Ã£o principal)
        Painel laranja que desliza entre itens
-    ════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .nav-indicator {
         position: absolute;
         left: 10px;
@@ -219,7 +219,7 @@
         pointer-events: none;
         opacity: 0;
         z-index: 0;
-        /* Transição suave — cubic-bezier com leve "mola" */
+        /* TransiÃ§Ã£o suave â€” cubic-bezier com leve "mola" */
         transition:
             top    0.32s cubic-bezier(0.34, 1.42, 0.64, 1),
             height 0.28s cubic-bezier(0.34, 1.2,  0.64, 1),
@@ -263,7 +263,7 @@
         background: rgba(255,255,255,.05);
         transition: background .22s ease, color .22s ease, box-shadow .22s ease, transform .18s ease;
     }
-    /* Estado hover — apenas a cor muda, o slide acontece via JS */
+    /* Estado hover â€” apenas a cor muda, o slide acontece via JS */
     .nav-item:hover {
         color: rgba(255,255,255,.88);
     }
@@ -272,7 +272,7 @@
         color: var(--brand);
         transform: scale(1.08);
     }
-    /* Estado ativo — sem border-left aqui (o indicador já faz isso) */
+    /* Estado ativo â€” sem border-left aqui (o indicador jÃ¡ faz isso) */
     .nav-item.active {
         color: #fff;
     }
@@ -289,7 +289,7 @@
     }
     .nav-item.nav-danger .nav-icon { background: rgba(220,38,38,.08); }
 
-    /* ── Rodapé sidebar ── */
+    /* â”€â”€ RodapÃ© sidebar â”€â”€ */
     .sidebar-footer {
         padding: 12px 14px;
         border-top: 1px solid rgba(255,255,255,.04);
@@ -312,9 +312,9 @@
         border: 1px solid rgba(249,115,22,.12);
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        MAIN WRAPPER
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .main-wrapper {
         margin-left: var(--sidebar-w);
         flex: 1;
@@ -323,9 +323,9 @@
         min-height: 100vh;
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        TOPBAR
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .topbar {
         height: var(--topbar-h);
         background: var(--card);
@@ -343,7 +343,7 @@
         align-items: center;
         gap: 14px;
     }
-    /* Botão hamburguer (mobile) */
+    /* BotÃ£o hamburguer (mobile) */
     .topbar-menu-btn {
         display: none;
         width: 36px; height: 36px;
@@ -441,15 +441,15 @@
         border: 2px solid rgba(249,115,22,.3);
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        PAGE CONTENT
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .page-content {
         padding: 28px;
         flex: 1;
     }
 
-    /* ── Page header ── */
+    /* â”€â”€ Page header â”€â”€ */
     .page-header {
         margin-bottom: 24px;
         display: flex;
@@ -472,9 +472,9 @@
         font-weight: 400;
     }
 
-    /* ═══════════════════════════════════════════════════════
-       CARDS GENÉRICOS
-    ═══════════════════════════════════════════════════════ */
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       CARDS GENÃ‰RICOS
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .card {
         background: var(--card);
         border-radius: var(--radius);
@@ -500,9 +500,9 @@
     }
     .card-body { padding: 20px 22px; }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        STAT CARDS
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .stats-grid {
         display: grid;
         gap: 16px;
@@ -559,9 +559,9 @@
         font-family: 'JetBrains Mono', monospace;
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        TABELA
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .table-wrapper { overflow-x: auto; }
     table {
         width: 100%;
@@ -598,9 +598,9 @@
         font-weight: 500;
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        BADGES
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .badge {
         display: inline-flex;
         align-items: center;
@@ -616,9 +616,9 @@
     .badge-blue   { background: var(--blue-bg);   color: var(--blue);   }
     .badge-purple { background: var(--purple-bg); color: var(--purple); }
 
-    /* ═══════════════════════════════════════════════════════
-       BOTÕES
-    ═══════════════════════════════════════════════════════ */
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       BOTÃ•ES
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .btn {
         display: inline-flex;
         align-items: center;
@@ -654,9 +654,9 @@
     }
     .btn-sm { padding: 5px 12px; font-size: .74rem; }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        EMPTY STATE
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .empty-state {
         text-align: center;
         padding: 52px 20px;
@@ -671,9 +671,9 @@
     }
     .empty-state p { font-size: .85rem; font-weight: 500; }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        FLASH MESSAGES
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     .flash {
         display: flex;
         align-items: center;
@@ -693,9 +693,9 @@
     .flash-success { background: var(--green-bg); color: var(--green); border-color: #86EFAC; }
     .flash-error   { background: var(--red-bg);   color: var(--red);   border-color: #FCA5A5; }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        RESPONSIVE
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     @media (max-width: 960px) {
         .sidebar { transform: translateX(calc(-1 * var(--sidebar-w))); }
         .sidebar.open { transform: translateX(0); }
@@ -719,11 +719,11 @@
         .page-title { font-size: 1.2rem; }
     }
 
-    /* ═══════════════════════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        PAGE TRANSITIONS
-    ═══════════════════════════════════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-    /* Overlay: dois painéis laranja como "cortina dupla" */
+    /* Overlay: dois painÃ©is laranja como "cortina dupla" */
     #page-transition-overlay {
         position: fixed;
         inset: 0;
@@ -828,7 +828,7 @@
     }
     @keyframes ripple { to { transform: scale(4); opacity: 0; } }
 
-    /* Entrada do conteúdo da página */
+    /* Entrada do conteÃºdo da pÃ¡gina */
     .page-content {
         animation: pageContentIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
@@ -851,7 +851,7 @@
         to   { opacity: 1; transform: translateY(0)    scale(1);   }
     }
 
-    /* Ícone gira no item clicado */
+    /* Ãcone gira no item clicado */
     .nav-item.nav-loading .nav-icon {
         animation: navIconSpin 0.5s cubic-bezier(.4,0,.2,1);
     }
@@ -864,14 +864,14 @@
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE TRANSITION OVERLAY
-══════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="page-transition-overlay" aria-hidden="true">
     <div class="panel"></div>
     <div class="panel"></div>
     <div class="overlay-logo">
-        <span class="overlay-egg">🥚</span>
+        <span class="overlay-egg">ðŸ¥š</span>
         <span class="overlay-text">Ovos Ebenezer</span>
     </div>
 </div>
@@ -879,9 +879,9 @@
 <!-- Barra de progresso -->
 <div id="nprogress-bar"></div>
 
-<!-- ══════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SIDEBAR
-══════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <aside class="sidebar" id="sidebar">
 
     <!-- Perfil no topo -->
@@ -895,55 +895,55 @@
         <div class="profile-name"><?= htmlspecialchars($_SESSION['usuario_nome'] ?? 'Admin') ?></div>
         <div class="profile-role"><?= htmlspecialchars($_SESSION['usuario_tipo'] ?? 'Administrador') ?></div>
         <div class="sidebar-logo-mini">
-            <div class="logo-badge">🥚</div>
+            <div class="logo-badge">ðŸ¥š</div>
             <span>Ovos Ebenezer</span>
         </div>
     </div>
 
-    <!-- Navegação -->
+    <!-- NavegaÃ§Ã£o -->
     <nav class="sidebar-nav" id="sidebar-nav">
 
         <!-- Indicador deslizante (posicionado via JS) -->
         <div class="nav-indicator" id="nav-indicator"></div>
 
         <div class="nav-section-label">Principal</div>
-        <a href="/dashboard" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/dashboard') !== false) ? 'active' : '' ?>">
+        <a href="/backend/dashboard" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/dashboard') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
             Dashboard
         </a>
 
         <div class="nav-section-label">Cadastros</div>
-        <a href="/usuario/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/usuario') !== false) ? 'active' : '' ?>">
+        <a href="/backend/usuario/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/usuario') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-users"></i></span>
             Usuários
         </a>
-        <a href="/produto/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/produto') !== false) ? 'active' : '' ?>">
+        <a href="/backend/produto/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/produto') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-box"></i></span>
             Produtos
         </a>
-        <a href="/pedido/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/pedido') !== false) ? 'active' : '' ?>">
+        <a href="/backend/pedidos/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/pedido') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-receipt"></i></span>
             Pedidos
         </a>
-        <a href="/endereco/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/endereco') !== false) ? 'active' : '' ?>">
+        <a href="/backend/endereco/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/endereco') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-map-marker-alt"></i></span>
             Endereços
         </a>
-        <a href="/estoque/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/estoque') !== false) ? 'active' : '' ?>">
+        <a href="/backend/estoque/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/estoque') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-boxes"></i></span>
             Estoque
         </a>
-        <a href="/avaliacao/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/avaliacao') !== false) ? 'active' : '' ?>">
+        <a href="/backend/avaliacao/listar" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/avaliacao') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-star"></i></span>
             Avaliações
         </a>
 
         <div class="nav-section-label">Sistema</div>
-        <a href="/configuracoes" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/configuracoes') !== false) ? 'active' : '' ?>">
+        <a href="/backend/configuracoes" class="nav-item <?= (strpos($_SERVER['REQUEST_URI'], '/configuracoes') !== false) ? 'active' : '' ?>">
             <span class="nav-icon"><i class="fas fa-gear"></i></span>
             Configurações
         </a>
-        <a href="/logout" class="nav-item nav-danger">
+        <a href="/backend/logout" class="nav-item nav-danger">
             <span class="nav-icon"><i class="fas fa-right-from-bracket"></i></span>
             Sair
         </a>
@@ -957,9 +957,9 @@
     </div>
 </aside>
 
-<!-- ══════════════════════════════════════
-     CONTEÚDO PRINCIPAL
-══════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     CONTEÃšDO PRINCIPAL
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div class="main-wrapper">
 
     <!-- Topbar -->
@@ -975,7 +975,7 @@
                     <?php
                     $uri = $_SERVER['REQUEST_URI'];
                     if (str_contains($uri, '/dashboard'))         echo 'Dashboard';
-                    elseif (str_contains($uri, '/usuario'))       echo 'Usuários';
+                    elseif (str_contains($uri, '/usuario'))       echo 'Usuarios';
                     elseif (str_contains($uri, '/produto'))       echo 'Produtos';
                     elseif (str_contains($uri, '/pedido'))        echo 'Pedidos';
                     elseif (str_contains($uri, '/endereco'))      echo 'Endereços';
@@ -990,7 +990,7 @@
                     <span class="sep">/</span>
                     <span><?php
                         if (str_contains($uri, '/backend/dashboard'))         echo 'Dashboard';
-                        elseif (str_contains($uri, '/usuario'))       echo 'Usuários';
+                        elseif (str_contains($uri, '/usuario'))       echo 'Usuarios';
                         elseif (str_contains($uri, '/produto'))       echo 'Produtos';
                         elseif (str_contains($uri, '/pedido'))        echo 'Pedidos';
                         elseif (str_contains($uri, '/endereco'))      echo 'Endereços';
@@ -1007,7 +1007,7 @@
                 <i class="fas fa-calendar-day"></i>
                 <?= date('d/m/Y') ?>
             </div>
-            <a href="/configuracoes" class="topbar-btn" title="Configurações">
+            <a href="/backend/configuracoes" class="topbar-btn" title="Configurações">
                 <i class="fas fa-gear"></i>
             </a>
             <div class="topbar-avatar-sm" title="<?= htmlspecialchars($_SESSION['usuario_nome'] ?? 'Admin') ?>">
@@ -1016,18 +1016,18 @@
         </div>
     </header>
 
-    <!-- Conteúdo da página -->
+    <!-- ConteÃºdo da pÃ¡gina -->
     <main class="page-content">
 
-<!-- ══════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGE TRANSITION + SLIDING NAV ENGINE
-══════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script>
 (function () {
 
-    /* ═══════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        1. SLIDING NAV INDICATOR
-    ═══════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     function initSlidingNav() {
         const nav       = document.getElementById('sidebar-nav');
         const indicator = document.getElementById('nav-indicator');
@@ -1040,12 +1040,12 @@
             const top     = elRect.top - navRect.top + nav.scrollTop;
 
             if (instant) {
-                /* Sem transição na primeira carga */
+                /* Sem transiÃ§Ã£o na primeira carga */
                 indicator.style.transition = 'none';
                 indicator.style.top        = top + 'px';
                 indicator.style.height     = elRect.height + 'px';
                 indicator.style.opacity    = '1';
-                /* Reativa transição no próximo frame */
+                /* Reativa transiÃ§Ã£o no prÃ³ximo frame */
                 requestAnimationFrame(() => {
                     indicator.style.transition = '';
                 });
@@ -1076,9 +1076,9 @@
         });
     }
 
-    /* ═══════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        2. PAGE TRANSITION ENGINE
-    ═══════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const overlay  = document.getElementById('page-transition-overlay');
     const bar      = document.getElementById('nprogress-bar');
     let   barTimer = null;
@@ -1120,15 +1120,15 @@
         overlay.addEventListener('animationend', () => { overlay.className = ''; }, { once: true });
     }
 
-    /* ═══════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        3. DOM READY
-    ═══════════════════════════ */
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     document.addEventListener('DOMContentLoaded', function () {
 
         /* Inicializa o indicador deslizante */
         initSlidingNav();
 
-        /* Animação de entrada */
+        /* AnimaÃ§Ã£o de entrada */
         playEnter();
         barFinish();
 
@@ -1168,12 +1168,12 @@
             });
         });
 
-        /* Formulários */
+        /* FormulÃ¡rios */
         document.querySelectorAll('form[action]').forEach(form => {
             form.addEventListener('submit', () => barStart());
         });
 
-        /* ── Mobile sidebar toggle ── */
+        /* â”€â”€ Mobile sidebar toggle â”€â”€ */
         const sidebarEl = document.getElementById('sidebar');
         const toggleBtn = document.getElementById('sidebar-toggle');
         if (toggleBtn && sidebarEl) {

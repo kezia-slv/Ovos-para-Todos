@@ -196,3 +196,5 @@ Stack trace:
 [27-Feb-2026 13:27:55 Europe/Berlin] ERRO: Tipo 'Administrador' inválido. Deve ser: Cliente, Funcionario, Motorista, Admin
 [27-Feb-2026 13:27:55 Europe/Berlin] ERRO AO INSERIR USUÁRIO: inseriUsuario retornou false para test2@example.com
 [27-Feb-2026 13:29:34 Europe/Berlin] Usuário não encontrado ou duplicado: admin@admin.com
+[27-Feb-2026 13:46:54 Europe/Berlin] Usuário não encontrado ou duplicado: test@test.com
+[27-Feb-2026 13:58:38 Europe/Berlin] Login bem-sucedido: keziaoficialk@gmail.com
